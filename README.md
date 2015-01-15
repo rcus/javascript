@@ -15,7 +15,7 @@ This software is free software and carries a MIT license.
 Use of external libraries
 -----------------------------------
 
-Get following external modules with Git submodules.
+Get following external modules with Git submodules: `git submodule update --init`.
 
 ### PHP Markdown
 * GitHub: https://github.com/michelf/php-markdown
