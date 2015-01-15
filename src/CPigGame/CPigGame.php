@@ -17,13 +17,10 @@ class CPigGame extends CPigRound
         'roll'  => 'Du fick en *ROLL*:a.<br />Fortsätt kasta eller stanna.',
         'one'   => 'Rackarns, en etta...<br />Du förlorade dina poäng den här rundan.',
         'stop'  => 'Du stannade rundan.<br />Dina poäng har sparats.',
-        // RM: 'win'   => 'Vi har en vinnare!<br />GRATTIS!',
-        'win'   => 'GRATTIS! Du vann!<br />Nu kan du hämta ut en hyrfilm.',
+        'win'   => 'Vi har en vinnare!<br />GRATTIS!',
         'lose'  => 'Du är besegrad!<br />Kämpa på bättre nästa gång.',
-        // RM: 'wait'  => 'Motståndarens tur.<br />Vänligen vänta.'
-        'wait'  => 'Vår tur.<br />Nu får du vänta.'
+        'wait'  => 'Motståndarens tur.<br />Vänligen vänta.'
         ), array(
-/*      RM: Changed some messages
         'name'  => 'Datorn',
         'start' => 'Datorn laddar upp.',
         'roll'  => 'Datorn fick en *ROLL*:a.<br />Funderar på nästa steg.',
@@ -32,15 +29,6 @@ class CPigGame extends CPigRound
         'win'   => 'Lycka och CPU\'n på högvarv!<br />Datorn vann!',
         'lose'  => 'Datorn förlorade och funderar på virus som hämnd...',
         'wait'  => 'Datorn väntar på sin tur.'
-*/
-        'name'  => 'Rental Movies',
-        'start' => 'Nu laddar vi. :)',
-        'roll'  => 'Vi fick en *ROLL*:a.<br />Funderar på nästa steg.',
-        'one'   => 'Stackars oss, en etta...<br />Buh-hu... *snörvel*',
-        'stop'  => 'Vi stannar och reflekterar.',
-        'win'   => 'Wohoo!<br />Vi vann, vi vann, vi vann!',
-        'lose'  => '!#=%("#=@%',
-        'wait'  => 'Vi väntar...'
         ));
 
 
@@ -64,8 +52,6 @@ class CPigGame extends CPigRound
         else {
             $info = 'Du spelar själv. När du har tränat färdigt kan du utmana <a href="?new=computer">datorn</a> eller <a href="?new=double">en vän</a>.';
         }
-        // RM: Line below.
-        $info = "Vinner du mot Rental Movies, så bjuder vi på en hyrfilm!";
         return $info;
     }
 

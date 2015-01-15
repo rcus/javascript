@@ -37,7 +37,7 @@ $herbert['title'] = "Kasta tärning";
 
 $herbert['main'] = <<<EOD
 <h1>Kasta tärning</h1>
-<p>Detta är en exempelsida som visar hur Herbert fungerar tillsammans med återanvändbara moduler.</p>
+<p>Detta är en exempelsida som visar hur Herbert fungerar tillsammans med återanvändbara moduler. För ett mer avancerat tärningsspel, spela <a href="pig.php">Kasta gris</a>.</p>
 <p>Hur många kast vill du göra, <a href='?roll=1'>1 kast</a>, <a href='?roll=3'>3 kast</a> eller <a href='?roll=6'>6 kast</a>? </p>
 {$html}
 EOD;
