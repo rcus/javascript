@@ -8,7 +8,7 @@ include(__DIR__.'/config.php');
 
 
 // Code for source.php
-$source = new CSource(array('secure_dir'=>'..', 'base_dir'=>'..'));
+$source = new CSource(array('secure_dir'=>'lekplats', 'base_dir'=>'lekplats'));
 $content = $source->View();
 
 
@@ -20,8 +20,7 @@ $herbert['stylesheets'][] = 'css/source.css';
 $herbert['title'] = "Källkod";
 
 $herbert['main'] = <<<EOD
-<h1>Visa källkod</h1>
-<p>Följande filer finns foldern nedan. Klicka på en fil för att visa källkoden.</p>
+<h1>Källkod</h1>
 $content
 EOD;
 
