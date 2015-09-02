@@ -61,9 +61,9 @@ $herbert['lang'] = 'sv';
 $herbert['title_append'] = ' | Herbert';
 
 $herbert['header'] = <<<EOD
-<a href='./' class='sitelogo'><img src='img/herbert.png' alt='Herbert Logo'/></a>
-<span class='sitetitle'>Webbtemplate</span>
-<span class='siteslogan'>Återanvändbara moduler för webbutveckling med PHP</span>
+<a href='./' class='sitelogo'><img src='img/me.png' alt=''/></a>
+<span class='sitetitle'>JavaScript</span>
+<span class='siteslogan'>Min webbplats för dbwebb.se/javascript</span>
 EOD;
 
 $herbert['menu'] = array(
