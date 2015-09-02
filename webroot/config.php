@@ -79,7 +79,7 @@ $herbert['menu'] = array(
 
 $herbert['footer'] = <<<EOD
 <footer>
-	<p>© 2015 Marcus Törnroth | <a href='https://github.com/rcus/herbert'>GitHub</a> | <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a></p>
+	<p>© 2015 Marcus Törnroth | <a href='https://github.com/rcus/javascript'>GitHub</a> | <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a></p>
 </footer>
 EOD;
 
@@ -96,8 +96,8 @@ $herbert['favicon']    = 'favicon.ico';
  * Settings for JavaScript.
  *
  */
-$herbert['modernizr'] = 'js/modernizr.js';
-$herbert['jquery'] = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'; // Set to null to disable jQuery 
+$herbert['modernizr'] = 'js/modernizr.min.js';
+$herbert['jquery'] = 'js/jquery.js'; // Set to null to disable jQuery 
 $herbert['javascript_include'] = array();
 //$herbert['javascript_include'] = array('js/main.js'); // To add extra javascript files
 
