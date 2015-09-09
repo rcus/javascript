@@ -1,9 +1,9 @@
-Herbert
+JavaScript
 =======
 
-A webbtemplate based on [Anax-base](https://github.com/mosbth/Anax-base).
+A website for JavaScript course at [dbwebb](http://dbwebb.se/javascript).
 
-Built by Marcus Törnroth.
+By Marcus Törnroth.
 
 
 License 
@@ -28,20 +28,6 @@ The following external modules are included and subject to its own license.
 * Version: 2.6.2
 * License: MIT license 
 * Path: included in `webroot/js/modernizr.js`
-
-
-History
------------------------------------
-
-v1.1.0 (2015-01-15)
-* Included some classes from another project
-
-v1.0.1 (2014-09-05)
-* Add missing file
-* Add item to menu
-
-v1.0.0 (2014-09-05)
-* First release.
 
 
 ----------------------------------
