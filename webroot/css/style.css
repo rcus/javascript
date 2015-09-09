@@ -88,6 +88,8 @@ body {
 
 #main h1,
 #main h2 {
+  position: relative;
+  padding-right: 250px;
   border-bottom: 1px solid #ccc;
 }
 
@@ -100,6 +102,32 @@ body {
   width: 70%;
 }
 
+#main .boxed h2 ul {
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 12px;
+}
+
+#main .boxed h2 ul li {
+  display: inline;
+}
+
+#main .boxed h2 ul li a {
+  padding: 4px 10px;
+  color: #666;
+  background-color: #eef;
+  text-decoration: none;
+}
+
+#main .boxed h2 ul li a:hover {
+  color: #333;
+  background-color: #ccf;
+}
+
 #main .sidebar {
   float: right;
   width: 25%;
@@ -108,8 +136,12 @@ body {
 }
 
 #main .sidebar ul {
-  padding-left: 16px;
+  padding-left: 8px;
   list-style-type: none;
+}
+
+#main .sidebar ul li {
+  margin-bottom: 8px;
 }
 
 #main .sidebar ul li a {
