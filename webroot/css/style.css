@@ -86,15 +86,47 @@ body {
   min-height: 20em;
 }
 
-#main h1 {
+#main h1,
+#main h2 {
   border-bottom: 1px solid #ccc;
 }
 
+#main h2 a {
+  text-decoration: none;
+}
+
+#main .boxed {
+  float: left;
+  width: 70%;
+}
+
+#main .sidebar {
+  float: right;
+  width: 25%;
+  padding-left: 2%;
+  border-left: 1px solid #ccc;
+}
+
+#main .sidebar ul {
+  padding-left: 16px;
+  list-style-type: none;
+}
+
+#main .sidebar ul li a {
+  color: #666;
+  text-decoration: none;
+}
+
+#main .sidebar ul li a:hover {
+  color: #333;
+  text-decoration: underline;
+}
 
 /**
  * Layout for footer
  */
 footer {
+  clear: both;
   margin-top: 40px;
   border-top: 1px solid #ccc;
   padding-top: 15px;

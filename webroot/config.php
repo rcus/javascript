@@ -70,15 +70,14 @@ $herbert['menu'] = array(
   'callback' => 'modifyNavbar',
   'items' => array(
     'home' => array('text'=>'HEM', 'url'=>'./', 'class'=>null),
-    'about' => array('text'=>'OM', 'url'=>'about.php', 'class'=>null),
-    'slideshow' => array('text'=>'SLIDESHOW', 'url'=>'slideshow.php', 'class'=>null),
-    'dice' => array('text'=>'TÄRNING', 'url'=>'dice.php', 'class'=>null)
+    'playground' => array('text'=>'LEKPLATS', 'url'=>'playground.php', 'class'=>null),
+    'report' => array('text'=>'REDOVISNING', 'url'=>'report.php', 'class'=>null)
   )
 );
 
 $herbert['footer'] = <<<EOD
 <footer>
-	<p>© 2015 Marcus Törnroth | <a href='https://github.com/rcus/javascript'>GitHub</a> | <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a></p>
+	<p>© 2015 Marcus Törnroth | <a href='https://github.com/rcus/javascript'>GitHub</a> | <a href='http://jsfiddle.net/user/rcus/'>JSFiddle</a></p>
 </footer>
 EOD;
 
