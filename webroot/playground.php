@@ -33,7 +33,7 @@ $herbert['main'] = <<<EOD
     </ul>
   </h2>
   <p>En liten figur som springer omkring med hjälp av knapparna på tangentbordet. Skriptet lyssnar efter vissa knapptryckningar. Är det rätt knapp kommer css'en uppdateras och därmed figuren flytta på sig. Figuren kommer kommer från en CSS-sprite som jag har "lånat" från mos.</p>
-  <img src="/img/sprite_mickey_mos.png" alt="">
+  <img src="./img/sprite_mickey_mos.png" alt="">
 
   <h2 id="resize-element">Ändra elementets storlek
     <ul>
