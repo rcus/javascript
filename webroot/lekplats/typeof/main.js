@@ -32,7 +32,6 @@ $(document).ready(function(){
     }
 
   for (var i=0; i<literals.length; i++) {
-    var str = 
     rows += '<li>' + prnt(literals[i]) + ": " + typeof(literals[i]) + '</li>';
   };
 
