@@ -16,9 +16,18 @@ $herbert['main'] = <<<EOD
 <div class="boxed">
   <p><em>Här kommer lite blandat material upp som man kan leka med.</em></p>
 
+  <h2 id="type-numbers">Numbers - datatyper och värden
+    <ul>
+      <li><a href="lekplats/type-numbers/">Lek nu!</a></li>
+      <li><a href="source.php?path=type-numbers/index.php">Visa källkoden</a></li>
+      <li><a href="http://jsfiddle.net/rcus/rnyeczoy/">JSFiddle</a></li>
+    </ul>
+  </h2>
+  <p>Med hjälp av olika matematiska och numeriska funktioner kan man bearbeta olika siffervärden.</p>
+
   <h2 id="typeof">Literaler och typer
     <ul>
-      <li><a href="lekplats/transforms-and-transitions/">Lek nu!</a></li>
+      <li><a href="lekplats/typeof/">Lek nu!</a></li>
       <li><a href="source.php?path=typeof/index.php">Visa källkoden</a></li>
       <li><a href="http://jsfiddle.net/rcus/w5pkm1sj/">JSFiddle</a></li>
     </ul>
