@@ -1,0 +1,64 @@
+/**
+ * Import base style
+ */
+@import "../mall/base.less";
+ 
+/**
+ * Here comes specific style for a certain test program.
+ */
+#flash {
+  position: relative;
+  overflow: hidden;
+  padding-right: 310px;
+}
+
+#board {
+  position: absolute;
+  width: 250px;
+  right: 20px;
+  top: 20px;
+  margin: 0;
+  background-color: @green;
+}
+
+#board > div {
+  float: left;
+  box-sizing: border-box;
+  width: 30%;
+  margin-left: 2.5%;
+  margin-bottom: .5em;
+  border: 1px solid darkgreen;
+  border-radius: 1em;
+  color: #fff;
+  line-height: 2em;
+  text-align: center;
+  font-weight: 500;
+}
+
+#board > div:first-of-type {
+  width: 95%;
+}
+
+#board > div.bgblack {
+  background-color: @black;
+}
+
+#board > div.bgred {
+  background-color: @red;
+}
+
+#board > div.highlight {
+  border-color: #fff;
+}
+
+input, select {
+  line-height: 1.2em;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid @greyLight;
+}
+
+input[type="number"], select {
+  width: 100px;
+  text-align: right;
+}
