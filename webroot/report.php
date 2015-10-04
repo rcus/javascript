@@ -38,11 +38,26 @@ $herbert['main'] = <<<EOD
     Men sen blev det inte mer av extra features.
   </p>
 
+  <h2 id="kmom02">Kmom02: Programmera med JavaScript</h2>
+  <p><strong>Allmänt om kursmoment 2</strong><br />
+    Nu blev det mer allvar :) Det märktes att det blev mer utmanande än att "bara" skapa testfunktioner. Nu ska delarna funka tillsammans och spelen ska kunna fungera. Vilket också är kul, tycker jag. Uppgifterna har i stort funkat bra, men det har tagit längre tid för mig med vissa moment än vad jag har tänkt mig. Bland annat tidsfunktionerna i Roulette, det var svårt att få till koden så att den väntar ut ett resultat innan den går vidare. Lösningen blev att jag loopade runt funktionen med setTimeout. Väl igång hade jag en enkel if-sats som bestämde om det var dags att köra innehållet, eller om den bara skulle startas om med en ny setTimeout.
+  </p>
+  <p><strong>Vilka funktioner har du lagt till i din variant av mos.js?</strong><br />
+    Min variant fick heta rcus.js. Den fick enbart en slumpfunktion, random(min, max), som returnerar ett heltal mellan min och max. Hade planer på att lägga en funktion som skrev ut innehåll till ett HTML-element, men la ner den idén då jag hade lite olika tweakningar på funktionen i de olika programmen jag gjorde.
+  </p>
+  <p><strong>Gjorde du något extra arbete på spelplanen med Boulder Dash, eller gjorde du kanske en egen spelvariant?</strong><br />
+    Nä, precis som Mos version, så kan min baddie bara gå runt på banan utan att något händer. Däremot la jag ner lite möda på att få till positionen av baddien, så att den skulle vara rätt placerad om sidan laddades om när man hade scrollat ner eller om fönsterstorleken ändrades. Jag blev nämligen först lite ställd då min baddie försvann då jag laddade om sidan, men förstod sedan att den fanns "ovanför" sidan.
+  </p>
+  <p><strong>Gjorde du något extra på Roulettespelet?</strong><br />
+    Inga extrafunktioner. Men jag försökte få till det så att jag kunde dela upp koden i flera funktioner. Vet dock inte om det enligt "best practice" med att lägga funktionerna som methods till ett objekt, som till exempel r.spin(). Men det blev min lösning, och jag tycker själv att jag fick bra översikt av koden.
+  </p>
+
 </div>
 <div class="sidebar">
   <h3>Välj kursmoment:</h3>
   <ul>
     <li><a href="#kmom01">Kmom01</a></li>
+    <li><a href="#kmom02">Kmom02</a></li>
   </ul>
 </div>
 EOD;

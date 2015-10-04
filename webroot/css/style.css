@@ -6,6 +6,15 @@ body {
   font-family: arial, sans-serif;
 }
 
+code {
+  background-color: #eef;
+}
+
+code.block {
+  display: block;
+  padding: 0.5em;
+  margin: 1em;
+}
 
 /**
  * Layout of the main page elements 
@@ -88,8 +97,6 @@ body {
 
 #main h1,
 #main h2 {
-  position: relative;
-  padding-right: 250px;
   border-bottom: 1px solid #ccc;
 }
 
@@ -102,7 +109,12 @@ body {
   width: 70%;
 }
 
-#main .boxed h2 ul {
+#main .playground h2 {
+  position: relative;
+  padding-right: 250px;
+}
+
+#main .playground h2 ul {
   position: absolute;
   right: 0;
   bottom: 8px;
@@ -112,18 +124,18 @@ body {
   font-size: 12px;
 }
 
-#main .boxed h2 ul li {
+#main .playground h2 ul li {
   display: inline;
 }
 
-#main .boxed h2 ul li a {
+#main .playground h2 ul li a {
   padding: 4px 10px;
   color: #666;
   background-color: #eef;
   text-decoration: none;
 }
 
-#main .boxed h2 ul li a:hover {
+#main .playground h2 ul li a:hover {
   color: #333;
   background-color: #ccf;
 }
