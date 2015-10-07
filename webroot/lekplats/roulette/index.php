@@ -24,7 +24,7 @@
     </form>
   </p>
 
-  <div id='board' class='box'></div>  
+  <div id='board' class='boardbox'></div>  
   <div id='output'></div>
 </div>
  
