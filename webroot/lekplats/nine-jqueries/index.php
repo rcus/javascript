@@ -11,13 +11,14 @@
     <div class='minimize hidden' title='Stäng'>&times;</div>
 
     <div id='box1' class='thegift hidden'>
-      <img src='https://unsplash.it/300/200/?random=1' alt='' />
+      <!-- <img src='https://unsplash.it/300/200/?random=1' alt='' /> -->
       <h1>Ändra bakgrundsfärg på ett element</h1>
       <p>
         Nu kommer den första boxen. Klicka på ett element, så ska du se att bakgrundsfärgen ändras. Cool!
       </p>
     </div>
   </div>
+
 
   <div class='gift boxed'>
     <div class='giftbox'>2</div>
@@ -35,12 +36,13 @@
     </div>
   </div>
 
+
   <div class='gift boxed'>
     <div class='giftbox'>3</div>
     <div class='minimize hidden' title='Stäng'>&times;</div>
 
     <div id='box3' class='thegift hidden'>
-      <img src='https://unsplash.it/300/200/?random=3' alt='' />
+      <!-- <img src='https://unsplash.it/300/200/?random=3' alt='' /> -->
       <h1>Lägg till och ta bort element</h1>
       <p>
         Vi har ändrat på element, men nu ska vi lägga till och ta bort. Lägg till en färgruta genom att ange en färgkod. Klicka på den för att ta bort den. Cool!
@@ -52,6 +54,7 @@
       </p>
     </div>
   </div>
+
 
   <div class='gift boxed'>
     <div class='giftbox'>4</div>
@@ -70,6 +73,7 @@
     </div>
   </div>
 
+
   <div class='gift boxed'>
     <div class='giftbox'>5</div>
     <div class='minimize hidden' title='Stäng'>&times;</div>
@@ -87,6 +91,21 @@
       </p>
     </div>
   </div>
+
+
+  <div class='gift boxed'>
+    <div class='giftbox'>6</div>
+    <div class='minimize hidden' title='Stäng'>&times;</div>
+
+    <div id='box6' class='thegift hidden'>
+      <img src='https://unsplash.it/1200/800/?random=6' alt='' />
+      <h1>Lightbox</h1>
+      <p>
+        Tänk utanför boxen... Nu ska vi visa bilden i hela fönstret, i ett lager över själva sidan. Poängen är att man inte ska behöva ladda om sidan eller bilden. Vilket var viktigt för mig, eftersom bilden slumpas fram varje gång sidan laddas om. Testa, bara att klicka på bilden. Cool!
+      </p>
+    </div>
+  </div>
+
 
 </div>
 

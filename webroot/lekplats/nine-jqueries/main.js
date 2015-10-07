@@ -89,5 +89,39 @@ $(document).ready(function(){
   });
 
 
+  // Box 6
+  $('#box6 img').click(function() {
+    $('<div id="overlay"></div>')
+      .css('opacity', '0')
+      .animate({'opacity' : '0.8'}, 'slow')
+      .appendTo('body');
+    $('<div id="lightbox"></div>')
+      .hide()
+      .appendTo('body');
+    $('<img>')
+      .attr('src', $(this).attr('src'))
+      .css({
+        'max-height': $(window).height() * 0.9, 
+        'max-width': $(window).width() * 0.9
+      })
+      .load(function() {
+        $('#lightbox')
+          .css({
+            'top': ($(window).height() - $('#lightbox').height()) / 2,
+            'left': ($(window).width() - $('#lightbox').width()) / 2
+          })
+          .delay('fast')
+          .fadeIn();
+      })
+      .appendTo('#lightbox');
+
+      $('#overlay, #lightbox').click(function() {
+        $('#overlay, #lightbox').fadeOut('slow', function() {
+          $(this).remove();
+        });
+      });
+  });
+
+
   console.log("Dags för att öppna paket!");
 });
