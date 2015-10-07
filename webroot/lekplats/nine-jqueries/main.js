@@ -3,10 +3,12 @@
  */
 $(document).ready(function(){
   'use strict';
-  var text;
-  text = document.getElementById('text');
-  text.innerHTML = 'Hello World!<br />Nu är dokumentet färdigladdat.';
-  text.className = 'green';
-  console.log('Allt är färdigt.');  
-  
+
+  $('#box1 h1, #box1 p, #box1 img').click(function() {
+    $(this).toggleClass('dark');
+    console.log("toggle!");
+  });
+
+
+  console.log("Dags för att öppna paket!");
 });

@@ -16,6 +16,15 @@ $herbert['main'] = <<<EOD
 <div class="boxed playground">
   <p><em>Här kommer lite blandat material upp som man kan leka med.</em></p>
 
+  <h2 id="nine-jqueries">Nio små jQuery-rätter
+    <ul>
+      <li><a href="lekplats/nine-jqueries/">Lek nu!</a></li>
+      <li><a href="source.php?path=nine-jqueries/index.php">Visa källkoden</a></li>
+      <li><a href="http://jsfiddle.net/rcus/60mj43hv/">JSFiddle</a></li>
+    </ul>
+  </h2>
+  <p>Blanda och ge! Här är nio olika jQuery-snippets samlade på en och samma sida. De har till uppgift att visa vad jQuery går för, hur de kan ändra html-innehåll och stilmallar.</p>
+
   <h2 id="roulette">Roulette
     <ul>
       <li><a href="lekplats/roulette/">Lek nu!</a></li>
