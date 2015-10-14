@@ -20,16 +20,17 @@ $herbert['main'] = <<<EOD
     <ul>
       <li><a href="lekplats/nine-jqueries/">Lek nu!</a></li>
       <li><a href="source.php?path=nine-jqueries/index.php">Visa källkoden</a></li>
-      <li><a href="http://jsfiddle.net/rcus/60mj43hv/">JSFiddle</a></li>
+      <li><a href="http://jsfiddle.net/rcus/12gr1yzd/">JSFiddle</a></li>
     </ul>
   </h2>
   <p>Blanda och ge! Här är nio olika jQuery-snippets samlade på en och samma sida. De har till uppgift att visa vad jQuery går för, hur de kan ändra html-innehåll och stilmallar.</p>
+  <p>I sista paketet finns även ett par jQuery-plugins som visar på möjligheten att göra ordentliga tillägg som lätt kan användas i flera sammanhang.</p>
 
   <h2 id="roulette">Roulette
     <ul>
       <li><a href="lekplats/roulette/">Lek nu!</a></li>
       <li><a href="source.php?path=roulette/index.php">Visa källkoden</a></li>
-      <li><a href="http://jsfiddle.net/rcus/60mj43hv/">JSFiddle</a></li>
+      <li><a href="http://jsfiddle.net/rcus/axrheog8/">JSFiddle</a></li>
     </ul>
   </h2>
   <p>Okey, då satsar vi... Här ska vi spela roulette enligt spelsystemet Martingale. Det betyder att man satsar 1 spelmarker (10 kr i mitt fall). Vid förlust, så dubblas insatsen och man satsar på samma färg igen. När man vinner börjar man om från början, men byter färg.</p>

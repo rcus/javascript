@@ -14,31 +14,9 @@
   text-align: center;
 }
 
-.dark {
-  background-color: @grey;
+.right {
+  float: right;
 }
-
-.yellowed {
-  background-color: @yellow;
-}
-
-.thumbnail {
-  width: 100px;
-}
-
-#overlay {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-}
-
-#lightbox {
-  position: fixed;
-}
-
 
 .giftwrapper {
   width: 80%;
@@ -84,9 +62,7 @@
   padding: 1em;
   overflow: auto;
 }
-.unboxed .thegift img {
-  float: right;
-}
+
 .minimize {
   position: absolute;
   top: 0;
@@ -95,11 +71,83 @@
 }
 
 
-#box5 p {
-  padding-right: 320px;
+.dark {
+  background-color: @grey;
 }
 
+.yellowed {
+  background-color: @yellow;
+}
+
+.thumbnail {
+  width: 100px;
+}
+
+#overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+#lightbox {
+  position: fixed;
+}
+
+
+#box4 img,
 #box6 img {
   width: 300px;
   height: 200px;
+}
+
+
+#box5 p,
+#box9 p {
+  padding-right: 320px;
+}
+
+
+#box7 #gallery {
+  padding: 16px;
+  border-radius: 10px;
+}
+#box7 #bigimage {
+  text-align: center;
+}
+#box7 #bigimage img {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+#box7 #thumbnails {
+  padding-top: 16px;
+  text-align: center;
+}
+#box7 #thumbnails img {
+  display: inline-block;
+  max-width: 75px;
+  max-height: 50px;
+  margin: 1px;
+}
+
+
+#box8 #slideshow {
+  position: relative;
+  width: 100%;
+  padding-bottom: 33%;
+}
+#box8 #slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+#box9 {
+  overflow: hidden;
 }
