@@ -1,5 +1,5 @@
 /*!
- * jQuery Lightbox Gallery
+ * jQuery Lightbox
  * http://www.student.bth.se/~matg12/javascript/webroot/lightbox.php
  *
  * Released under the MIT license:
@@ -27,18 +27,60 @@
 
 (function ($) {
   $.fn.lightbox = function(options) {
-    // This is the easiest way to have default options.
     var settings = $.extend({
-      // These are the defaults.
-      textTransform: ['capitalize', 'uppercase', 'lowercase', 'none']
+      backgroundColor: '#000'
     }, options );
 
-    // Save current setting
-    $.fn.lightbox.current = isNaN($.fn.lightbox.current) ? 0 : ($.fn.lightbox.current + 1) % settings.textTransform.length;
+    // Create #overlay element
+    $('<div id="overlay"></div>')
+      .css({
+        position: 'fixed',
+        left: 0,
+        top: 0,
+        width: '100%',
+        height: '100%',
+        backgroundColor: settings.backgroundColor,
+        opacity: 0
+      })
+      .animate({'opacity' : '0.8'}, 'slow')
+      .appendTo('body');
 
-    // Transform text
-    return this.each(function() {
-      $(this).css('text-transform', settings.textTransform[$.fn.lightbox.current]);
+    // Create #lightbox element
+    $('<div id="lightbox"></div>')
+      .hide()
+      .css({
+        position: 'fixed'
+      })
+      .appendTo('body');
+
+    // Create image element
+    $('<img>')
+      .attr('src', $(this).attr('src'))
+      .css({
+        'max-height': $(window).height() * 0.9, 
+        'max-width': $(window).width() * 0.9
+      })
+      .load(function() {
+        $('#lightbox')
+          .css({
+            'top': ($(window).height() - $('#lightbox').height()) / 2,
+            'left': ($(window).width() - $('#lightbox').width()) / 2
+          })
+          .delay('fast')
+          .fadeIn();
+      })
+      .appendTo('#lightbox');
+
+    // Remove lightbox on click
+    $('#overlay, #lightbox').click(function() {
+      $('#overlay, #lightbox').fadeOut('slow', function() {
+        $(this).remove();
+      });
     });
+
   };
 }(jQuery));
+
+$('img.lightbox').click(function() {
+  $(this).lightbox();
+});

@@ -10,6 +10,7 @@ code {
   background-color: #eef;
 }
 
+pre code,
 code.block {
   display: block;
   padding: 0.5em;
