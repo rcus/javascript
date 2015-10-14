@@ -16,6 +16,11 @@ code.block {
   margin: 1em;
 }
 
+.thumbnail {
+  max-width: 150px;
+  max-height: 100px;
+}
+
 /**
  * Layout of the main page elements 
  */

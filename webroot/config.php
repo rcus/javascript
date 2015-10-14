@@ -71,7 +71,8 @@ $herbert['menu'] = array(
   'items' => array(
     'home' => array('text'=>'HEM', 'url'=>'./', 'class'=>null),
     'playground' => array('text'=>'LEKPLATS', 'url'=>'playground.php', 'class'=>null),
-    'report' => array('text'=>'REDOVISNING', 'url'=>'report.php', 'class'=>null)
+    'report' => array('text'=>'REDOVISNING', 'url'=>'report.php', 'class'=>null),
+    'lightbox' => array('text'=>'LIGHTBOX-PLUGIN', 'url'=>'lightbox.php', 'class'=>null)
   )
 );
 
@@ -96,7 +97,7 @@ $herbert['favicon']    = 'favicon.ico';
  */
 $herbert['modernizr'] = 'js/modernizr.min.js';
 $herbert['jquery'] = 'js/jquery.js'; // Set to null to disable jQuery 
-$herbert['javascript_include'] = array();
+$herbert['javascript_include'] = array('js/jquery-lightbox.js');
 //$herbert['javascript_include'] = array('js/main.js'); // To add extra javascript files
 
 

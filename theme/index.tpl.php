@@ -13,7 +13,14 @@
   <div id='wrapper'>
     <div id='header'><?=$header?></div>
     <div id='navbar'><?=get_menu($herbert['menu'])?></div>
+<?php if(isset($main)): ?>
     <div id='main'><?=$main?></div>
+<?php else: ?>
+    <div id='main'><h1><?=$title?></h1>
+      <div class="boxed"><?=$boxed?></div>
+      <div class="sidebar"><?=$sidebar?></div>
+    </div>
+<?php endif; ?>
     <div id='footer'><?=$footer?></div>
   </div>
 
