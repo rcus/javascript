@@ -5,9 +5,10 @@
  */
 
 // Include the essential config-file which also creates the $herbert variable with its defaults.
-include(__DIR__.'/config.php'); 
+include(__DIR__.'/config.php');
 $textFilter = new CTextFilter();
 
+$herbert['javascript_include'][] = 'js/jquery-lightbox.js';
 
 // Do it and store it all in variables in the Herbert container.
 $herbert['title'] = "jQuery Lightbox plugin";

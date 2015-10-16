@@ -97,7 +97,8 @@ $herbert['favicon']    = 'favicon.ico';
  */
 $herbert['modernizr'] = 'js/modernizr.min.js';
 $herbert['jquery'] = 'js/jquery.js'; // Set to null to disable jQuery 
-$herbert['javascript_include'] = array('js/jquery-lightbox.js');
+$herbert['javascript_include'] = array();
+//$herbert['javascript_include'] = array('js/jquery-lightbox.js');
 //$herbert['javascript_include'] = array('js/main.js'); // To add extra javascript files
 
 
