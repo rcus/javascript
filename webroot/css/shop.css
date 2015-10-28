@@ -1,0 +1,207 @@
+/**
+ * jQuery Book Shop
+ *
+ */
+
+#booklist:after,
+#shoppingcart:after {
+    display: block;
+    content: " ";
+    clear: both;
+}
+
+#booklist .item {
+    float: left;
+    width: 30%;
+    margin-left: 4%;
+    margin-bottom: 2em;
+    background-color: rgba(238, 238, 238, 0.95);
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 0px #555;
+}
+#booklist .item:nth-of-type(3n+1) {
+    margin-left: 0;
+}
+
+#booklist .item .cover {
+    margin: 5px;
+    height: 200px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#booklist .item .description {
+    margin: 5px;
+    min-height: 85px;
+}
+#booklist .item .description .title {
+    width: 100%;
+    height: 2em;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+#booklist .item .description .author {
+    width: 100%;
+    height: 1em;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: smaller;
+}
+#booklist .item .description .buy {
+    position: relative;
+    width: 100%;
+    height: 2.5em;
+}
+#booklist .item .description .buy:after {
+    display: block;
+    content: " ";
+    clear: both;
+}
+#booklist .item .description .buy .price {
+    position: absolute;
+    left: 0.5em;
+    bottom: 0.5em;
+    font-style: italic;
+}
+#booklist .item .description .buy .button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 5px;
+    background-color: green;
+    border: 1px solid darkgreen;
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+
+
+#shoppingcart {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    background-color: rgba(238, 238, 238, 0.95);
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 0px #555;
+}
+
+#shoppingcart > div:first-child {
+    border-bottom: 1px solid #999;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+}
+#shoppingcart > div:first-child:after {
+    display: block;
+    content: " ";
+    clear: both;
+}
+#shoppingcart > div:first-child img {
+    float: right;
+    width: 40px;
+    margin-bottom: 4px;
+}
+
+#shoppingcart #content {
+    padding-top: 1em;
+}
+
+#shoppingcart .item {
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    border-top: 1px dashed #999;
+}
+#shoppingcart .item:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+#shoppingcart .item .title {
+    width: 100%;
+    height: 1em;
+    margin-bottom: 5px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#shoppingcart .item .info {
+    text-align: right;
+    font-size: smaller;
+    font-style: italic;
+}
+
+#shoppingcart .item .info span {
+    cursor: pointer;
+}
+
+#shoppingcart .summary {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid #999;
+    text-align: right;
+    font-style: italic;
+}
+
+#shoppingcart .button {
+    width: 100%;
+    margin-top: 1em;
+    padding: 5px;
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+
+#shoppingcart #emptybtn {
+    background-color: red;
+    border: 1px solid darkred;
+}
+
+#shoppingcart #checkoutbtn {
+    background-color: green;
+    border: 1px solid darkgreen;
+}
+
+
+#checkout {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    background-color: rgba(238, 238, 238, 0.95);
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 0px #555;
+}
+
+#checkout fieldset {
+    border-color: #999;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+#checkout label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+
+#checkout fieldset input,
+#checkout fieldset select {
+    width: 200px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0.3em;
+
+}

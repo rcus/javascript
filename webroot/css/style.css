@@ -22,6 +22,7 @@ code.block {
   max-height: 100px;
 }
 
+
 /**
  * Layout of the main page elements 
  */
@@ -99,6 +100,11 @@ code.block {
  */
 #main {
   min-height: 20em;
+}
+#main:after {
+    display: block;
+    content: " ";
+    clear: both;
 }
 
 #main h1,

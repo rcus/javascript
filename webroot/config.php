@@ -58,7 +58,7 @@ $herbert['db']['driver_options'] = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NA
  *
  */
 $herbert['lang'] = 'sv';
-$herbert['title_append'] = ' | Herbert';
+$herbert['title_append'] = '';
 
 $herbert['header'] = <<<EOD
 <a href='./' class='sitelogo'><img src='img/me.png' alt=''/></a>
@@ -72,7 +72,8 @@ $herbert['menu'] = array(
     'home' => array('text'=>'HEM', 'url'=>'./', 'class'=>null),
     'playground' => array('text'=>'LEKPLATS', 'url'=>'playground.php', 'class'=>null),
     'report' => array('text'=>'REDOVISNING', 'url'=>'report.php', 'class'=>null),
-    'lightbox' => array('text'=>'LIGHTBOX-PLUGIN', 'url'=>'lightbox.php', 'class'=>null)
+    'lightbox' => array('text'=>'LIGHTBOX-PLUGIN', 'url'=>'lightbox.php', 'class'=>null),
+    'shop' => array('text'=>'SHOP', 'url'=>'shop.php', 'class'=>null)
   )
 );
 
