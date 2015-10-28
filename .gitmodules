@@ -1,8 +1,4 @@
-[submodule "lib/php-markdown"]
-	path = lib/php-markdown
-	url = https://github.com/michelf/php-markdown
-
-[submodule "lib/HTMLForm"]
-  path = lib/HTMLForm
-  url = https://github.com/mosbth/cform
-  branch = v2
+[submodule "lib/cform"]
+	path = lib/cform
+	url = https://github.com/mosbth/cform
+	branch = v2
