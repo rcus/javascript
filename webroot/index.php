@@ -22,8 +22,8 @@ $herbert['main'] = <<<EOD
 </div>
 <div class="sidebar">
   <h3>Aktuellt just nu:</h3>
-  <p>Färdig med <a href="report.php#kmom02">Kmom02</a>.</p>
-  <p>Har kommit igång med lekplatsen.</p>
+  <p>Nu är <a href="shop.php">shoppen</a> öppen.</p>
+  <p>Läs <a href="report.php#kmom04">senast redovisningen</a>.</p>
 </div>
 EOD;
 
