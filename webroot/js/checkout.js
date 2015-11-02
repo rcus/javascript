@@ -3,57 +3,68 @@
  *
  */
 
-var SHOP = {
-  items: {
-    container: '#booklist',
-    url: 'api/products.php',
+var CHECKOUT = {
+  order : {
+    container: '#confirm',
+    url: 'api/checkout.php',
     running: false,
     init: function() {
-      this.load();
+      this.loadSum();
+      var _order = this;
+      $('#orderbtn').click(function() {
+        _order.submitForm();
+      });
     },
-    load: function() {
+    loadSum: function() {
       // Don't call if we're already running!
       if (this.running) { return; }
       this.running = true;
 
-      var _items = this;
+      var _order = this;
       $.ajax({
         type: 'get',
-        url: this.url,
+        url: this.url+'?do=sum',
         success: function(data) {
-          $.each(data, function() {
-            _items.display(this);
-          });
+          _order.displaySum(data);
         },
         complete: function() {
-          _items.running = false;
+          _order.running = false;
         }
       });
     },
-    display: function(item) {
-      itemId = 'item-'+item.pid;
-
+    displaySum: function(data) {
       $('<div>')
-        .attr('id', itemId)
-        .addClass('item')
-        .hide()
+        .attr('id', 'cartsum')
         .html(
-          '<div class="cover" style="background-image: url('+item.img+');"></div>\n'+
-          '<div class="description">\n'+
-          '  <div class="title">'+item.title+'</div>\n'+
-          '  <div class="author">'+item.author+'</div>\n'+
-          '  <div class="buy"><span class="price">'+item.price+' kr</span>\n'+
-          '  <input type="button" id="'+item.pid+'" class="button" value="Köp"></div>\n'+
-          '</div>\n'
+          'När du skickar beställningen kommer <strong>'+data.sum+' kr</strong> dras från ovanstående kort.'
         )
-        .data(item)
         .appendTo(this.container);
+    },
+    submitForm: function() {
+      // Don't call if we're already running!
+      if (this.running) { return; }
+      this.running = true;
 
-      $('#'+itemId+' input[type=button]').data(item);
-      $('#'+itemId).fadeIn();
-
-      $('#'+itemId+' .button').click(function() {
-        SHOP.cart.add($(this).data());
+      var _order = this;
+      $.ajax({
+        type: 'post',
+        url: this.url+'?do=pay',
+        data: $('form').serialize(),
+        success: function(data) {
+          if (data.status === 'validate') {
+            var name = $('label[for='+data.output+']').text().replace(':','');
+            $('#output').text('Du måste fylla i fältet "'+name+'"').addClass(data.status);
+          }
+          else {
+            $('#checkout').addClass(data.status).text(data.output);
+            if (data.status === 'ok') {
+              $('#shoppingcart').hide();
+            }
+          }
+        },
+        complete: function() {
+          _order.running = false;
+        }
       });
     }
   },
@@ -99,17 +110,10 @@ var SHOP = {
         $(_cart.container).append(
           '<div id="cart-'+this.pid+'" class="item">\n'+
           '  <div class="title">'+this.title+'</div>\n'+
-          '  <div class="info">Antal: '+this.qty+
-          '    <span class="addItem">+</span> <span class="removeItem">&minus;</span><br>\n'+
+          '  <div class="info">Antal: '+this.qty+'<br>\n'+
           '  Pris: '+this.sum+' kr</div>\n'+
           '</div>'
         );
-        $('#cart-'+this.pid+' .addItem').data(this).click(function() {
-          SHOP.cart.add($(this).data());
-        });
-        $('#cart-'+this.pid+' .removeItem').data(this).click(function() {
-          SHOP.cart.remove($(this).data());
-        });
         _cart.qty += this.qty;
         _cart.sum += this.sum;
       });
@@ -117,66 +121,33 @@ var SHOP = {
         .append(
           '<div class="summary">Antal varor: '+this.qty+'<br>'+
           'Summa: '+this.sum+' kr</div>'+
-          '<input type="button" id="empty" class="button" value="Töm kundvagnen">'+
-          '<input type="button" id="checkout" class="button" value="Gå till kassan">'
+          '<input type="button" id="emptybtn" class="button" value="Töm kundvagnen">'+
+          '<input type="button" id="shopbtn" class="button" value="Fortsätt handla">'
         );
-      $('#shoppingcart #empty').click(function() {
-        SHOP.cart.empty();
+      $('#shoppingcart #emptybtn').click(function() {
+        CHECKOUT.cart.empty();
       });
-    },
-    displayEmpty: function() {
-      $(this.container).html('Kundvagnen är tom');
-    },
-    add: function(item) {
-      var _cart = this,
-        itemData = item;
-      $.ajax({
-        type: 'post',
-        url: this.url+'?do=add',
-        data: itemData,
-        success: function() {
-          _cart.load();
-        },
-        error: function() {
-          console.log('cart.add - error');
-        }
-      });
-    },
-    remove: function(item) {
-      var _cart = this,
-        itemData = item;
-      $.ajax({
-        type: 'post',
-        url: this.url+'?do=remove',
-        data: itemData,
-        success: function() {
-          _cart.load();
-        },
-        error: function() {
-          console.log('cart.remove - error');
-        }
+      $('#shoppingcart #shopbtn').click(function() {
+        window.history.go(-1);
       });
     },
     empty: function() {
-      var _cart = this;
       $.ajax({
         type: 'post',
         url: this.url+'?do=empty',
         success: function() {
-          _cart.load();
+          window.location.replace('shop.php');
         }
       });
     }
   },
+
   load: function() {
-    this.items.init();
+    this.order.init();
     this.cart.init();
-  },
-  doSomething: function(msg) {
-    console.log(msg);
   }
 };
 
 $(function() {
-  // SHOP.load();
+  CHECKOUT.load();
 });

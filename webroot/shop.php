@@ -20,7 +20,7 @@ EOD;
 
 $herbert['sidebar'] = <<<EOD
 <div id="shoppingcart">
-  <div><img src="http://dbwebb.se/img/cart.png" alt=""> Din kundvagn</div>
+  <div><img src="http://dbwebb.se/img/cart.png" alt="">Din kundvagn</div>
   <div id="content"></div>
 </div>
 EOD;

@@ -73,6 +73,26 @@ Tidigare har jag bara använt jQuery för att enkelt kunna hämta specifika elem
 **Berätta om din plugin.**  
 Jag byggde [*jQuery Lightbox plugin*](http://www.student.bth.se/~matg12/javascript/webroot/lightbox.php) som fungerar som lightboxen från paket nummer 6. Tanken var att bygga vidare det till en kombination av galleriet, där övriga valda bilder skulle synas under den stora bilden i lightboxen, i ett lager över den vanliga webbsidan. Men insikten om att jag skulle vilja göra det så ordentligt att tiden skulle springa iväg kom till mig, så det får bli en annan gång. Men jag är väldigt nöjd över pluginet så som det blev.
 
+##Kmom04: AJAX och JSON med jQuery {#kmom04}
+
+**Allmänt om kursmoment 4**  
+Okej, nu börjar det bli lite nytta på allvar med jQuery. Kul att få till "riktiga" funktioner. Jag tycker det är roligare när det finns ett konkret mål i sikte. Butikens innehåll och kundkorgen blev jag nöjd med. Fick med en funktion i kundkorgen där man kan öka eller minska antalet böcker.  
+Dock blev det inte fullt ut med utceckningen, jag skippade en del validering av formuläret på serversidan. Det går att få till varje fält så att de kontrollerar innehållet med tanke på vad det ska innehålla. Min lösning blev en väldigt förenklad, jag kollade bara att fälten innehöll något tecken. Dock är nummer-fälten inställda att bara ta siffror, så lite begränsningar är det. Sedan valde jag att skicka formluläret med `.click()`-funktionen i jQuery, så HTML5-valideringen av fälten körs inte.
+
+**Vad tycker du om Ajax, hur känns det att jobba med?**  
+Känns hyfsat lätt att komma igång med och få en blick över hur det funkar. Smidigt att jobba med. Det har sina fördelar att jobba mot ett API, så att man kan hämta data dynamiskt. Det som jag skulle vilja sätta mig in i framöver är autentisiering vid hämtning av data från API'er, men det tar vi när det bli aktuellt... :)
+
+**Vilka är dina erfarenheter av Ajax inför detta kursmoment?**  
+Har använt Ajax lite tidigare, men använt färdig kod. Det som har ställt till det för mig innan är cross domain requests, där det ibland har blivit stopp för att hämta från olika domäner. Lösningarna har blivit indivduella, men sammanhanget har varit samma "dataägare" med olika domännamn. Nu efter kursmomentet har jag mer kött på benen och kan gå vidare lite bättre med detta framöver.
+
+**Berätta om din webbshop på din me-sida, hur gjorde du?**  
+Shoppen visar objekten i egna rutor, där man kan klicka på en köp-knapp. Vid köp skickas hela data-objekten för boken med till API'et `cart.php`. Det gick enkelt att göra med `.data()`, vilket var en ny funktion för min del. Smidig funktion, lätt att förstå.  
+Kundvagnen fick även funktioner för att lägga till eller ta bort exemplar av valda böcker. Skulle man ta bort det sista exemplaret, så försvinner boken helt från kundvagnen.  
+Däremot blev utceckningen något enklare än vad jag tänkte mig från början. Jag fick inte till mos CForm, vilket gjorde att jag kodade mina formulärfält direkt in i PHP-filen. Valideringen blev också i en enklare variant, precis som jag skrev tidigare.
+
+**Lyckades du göra extra-uppgiften och paketera din kod?**  
+Nope, inget försök där.
+
 EOD
 , 'markdown');
 
@@ -81,6 +101,7 @@ $herbert['sidebar'] = $textFilter->doFilter(<<<EOD
 + [Kmom01](#kmom01)
 + [Kmom02](#kmom02)
 + [Kmom03](#kmom03)
++ [Kmom04](#kmom04)
 EOD
 , 'markdown');
 

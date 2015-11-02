@@ -11,7 +11,7 @@ $do = isset($_GET['do']) ? $_GET['do'] : null;
 $data = $_POST;
 
 // Add product
-if($do == 'add' && !empty($data)) {
+if ($do === 'add' && !empty($data)) {
     $key = array_search($data['pid'], array_column($_SESSION['cart'], 'pid'));
     if ($key === false) {
         $key = count($_SESSION['cart']);
@@ -24,7 +24,7 @@ if($do == 'add' && !empty($data)) {
 }
 
 // Remove product
-if($do == 'remove' && !empty($data)) {
+if ($do === 'remove' && !empty($data)) {
     $key = array_search($data['pid'], array_column($_SESSION['cart'], 'pid'));
     if ($key !== false) {
         if ($_SESSION['cart'][$key]['qty'] > 1) {
@@ -38,7 +38,7 @@ if($do == 'remove' && !empty($data)) {
 }
 
 // Empty the cart
-if($do == 'empty') {
+if ($do === 'empty') {
     $_SESSION['cart'] = [];
 }
 

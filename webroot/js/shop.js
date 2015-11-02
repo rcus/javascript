@@ -46,7 +46,7 @@ var SHOP = {
           '  <input type="button" id="'+item.pid+'" class="button" value="Köp"></div>\n'+
           '</div>\n'
         )
-        .data(item)
+        // .data(item)
         .appendTo(this.container);
 
       $('#'+itemId+' input[type=button]').data(item);
@@ -174,12 +174,10 @@ var SHOP = {
       window.location.href = 'checkout.php';
     }
   },
+
   load: function() {
     this.items.init();
     this.cart.init();
-  },
-  doSomething: function(msg) {
-    console.log(msg);
   }
 };
 
