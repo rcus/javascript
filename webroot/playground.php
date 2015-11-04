@@ -16,6 +16,15 @@ $herbert['main'] = <<<EOD
 <div class="boxed playground">
   <p><em>Här kommer lite blandat material upp som man kan leka med.</em></p>
 
+  <h2 id="canvas-game">Ett canvas-spel
+    <ul>
+      <li><a href="lekplats/canvas-game/">Lek nu!</a></li>
+      <li><a href="source.php?path=canvas-game/index.php">Visa källkoden</a></li>
+      <li><a href="http://jsfiddle.net/rcus/4d893r6t/">JSFiddle</a></li>
+    </ul>
+  </h2>
+  <p></p>
+
   <h2 id="nine-jqueries">Nio små jQuery-rätter
     <ul>
       <li><a href="lekplats/nine-jqueries/">Lek nu!</a></li>
