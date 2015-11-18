@@ -16,6 +16,22 @@ $herbert['main'] = <<<EOD
 <div class="boxed playground">
   <p><em>Här kommer lite blandat material upp som man kan leka med.</em></p>
 
+  <h2 id="breakout">Breakout
+    <ul>
+      <li><a href="lekplats/breakout/">Lek nu!</a></li>
+      <li><a href="source.php?path=breakout/index.php">Visa källkoden</a></li>
+    </ul>
+  </h2>
+  <p>År 1976 släptes arkadspelet Breakout av Atari, Inc. Det har sedan gjorts flera varianter. Och nu kommer min!</p>
+
+  <h2 id="canvas-game">Ett canvas-spel
+    <ul>
+      <li><a href="lekplats/canvas-game/">Lek nu!</a></li>
+      <li><a href="source.php?path=canvas-game/index.php">Visa källkoden</a></li>
+    </ul>
+  </h2>
+  <p>En första användning av canvas för min del. Detta kommer från genomgången på dbwebb.</p>
+
   <h2 id="nine-jqueries">Nio små jQuery-rätter
     <ul>
       <li><a href="lekplats/nine-jqueries/">Lek nu!</a></li>

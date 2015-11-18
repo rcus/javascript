@@ -93,6 +93,26 @@ Däremot blev utceckningen något enklare än vad jag tänkte mig från början.
 **Lyckades du göra extra-uppgiften och paketera din kod?**  
 Nope, inget försök där.
 
+##Kmom05: HTML5 och Canvas {#kmom05}
+
+**Allmänt om kursmoment 5**  
+Att programmera spel är en bra utmaning. Det är många bitar att ta hänsyn till, det ska flyta på bra och vara smidigt för spelaren att förstå och fastna för. Men det faller mig inte riktigt i smaken då jag själv inte är en storspelare. Det går i vågor hur mycket jag spelar, men en i ganska liten omfattning. I detta moment kommer dock min ambition fram om att göra ett bra resultat, så jag ger mig inte!
+
+**Vilka möjligheter ser du med HTML5 Canvas?**  
+Det grafiska har jag inte använt mig av nämnvärt. Men det har verkligen sin poäng med att kunna koda fram grafik, för att kunna använda det i olika sammanhang där vanliga bild har sina begränsningar. Jag kan tänka mig att canvas har en fördel vid animeringar.  
+Ett sidospår som skulle vara intressant, men jag antagligen inte kommer sätta mig in i inom den närmsta tiden, är vektorbaserad grafik med SVG. 
+
+**Hur avancerat gjorde du din spelfysk (om du överhuvudtaget har någon i ditt spel)?**  
+Eftersom det inte stod i uppgiften, så tänkte jag i första hand på att få spelet att fungera. Det hade varit en bit till att programmera, hade säkert funkat, men jag kommer just nu inte på vilken typ av spelfusk jag skulle lagt in.
+
+**Beskriv och berätta om ditt spel. Förklara hur du använder objekt och prototyper.**  
+Breakout blev det, en klon av orgrinalspelet från 1976. Med en boll ska man slå bort alla brickor i övre delen av skärmen. Bollen studsar fram på väggarna och i taket, men för att den inte ska åka ut i nederkanten kan man som spelare flytta en platta i sidled för att bollen ska studsa på den.  
+Jag har skapat spelet med hjälp av flera objekt. Förutom `Vector` från genomgången, använder jag mig av objektet `Brick` för varje bricka, `Bricks` för uppställningen av alla brickor tillsammans, `Paddle` som styr plattan och `Ball` för bollen. Varje objekt har egna prototyper för att exempelvis rita upp grafiken på aktuell position. (Just prototypen `Bricks.draw` ritar inte upp någon egen grafik, men hänvisar vidare till alla enskilda `Brick`-objekt som är lagrade i en array.) En annan återkommande prototyp är `update` som updaterar alla värden innan det är dags att rita upp det grafiska. Sedan finns det även prototyper som är specfika för ett objekt, exempelvis `Ball.collide` som räknar ut om det sker en kollision mellan objektet `Ball` och ett angivet objekt. För att hålla koll på spelets status skapade jag objektet `Status`, som håller koll på poäng, liv och spelmoment i väntan på att starta igång bollen.  
+Dock är det två saker som jag inte har riktigt fått kläm på, trots att spelet fungerar (nästan) som det ska. Det första är användningen av `lastGameTick` från genomgången. Jag vet inte riktigt hur jag skulle få in det i mitt spel. Jag kan tänka mig att det har att göra med säkerställningen av att bollens hastighet blir mer konstant, oavsett hårdvaruförutsättningar. Det är andra är att för varje gång spelaren startat ett nytt spel utan att ladda om sidan, alltså när liven är slut eller alla brickor är träffade, så har bollen fått en ökad hastighet. Jag tänker ju att jag skapar ett nytt objekt för den nya bollen med samma förutsättningar. Kanske är detta något som har med min första fundering (`lastGameTick`) att göra?? Någon som har en idé varför det blir så?
+
+**Gjorde du något på extrauppgiften?**  
+Nej. Min ambition att göra ett bra spel tog all min tid. Å andra sidan blev jag nöjd med det resultatet!
+
 EOD
 , 'markdown');
 
@@ -102,6 +122,7 @@ $herbert['sidebar'] = $textFilter->doFilter(<<<EOD
 + [Kmom02](#kmom02)
 + [Kmom03](#kmom03)
 + [Kmom04](#kmom04)
++ [Kmom05](#kmom05)
 EOD
 , 'markdown');
 
