@@ -16,7 +16,8 @@ httpServer.listen(port, function() {
 });
 
 // Require the modules we need
-var WebSocketServer = require('websocket').server;
+var WebSocketServer = require('/home/saxon/teachers/com/mosstud/www/node/node_modules/websocket').server;
+// var WebSocketServer = require('websocket').server;
  
 // Create an object for the websocket
 // https://github.com/Worlize/WebSocket-Node/wiki/Documentation
