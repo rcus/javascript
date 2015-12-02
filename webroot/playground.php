@@ -16,6 +16,14 @@ $herbert['main'] = <<<EOD
 <div class="boxed playground">
   <p><em>Här kommer lite blandat material upp som man kan leka med.</em></p>
 
+  <h2 id="chat">Chat
+    <ul>
+      <li><a href="lekplats/chat/">Lek nu!</a></li>
+      <li><a href="source.php?path=chat/index.php">Visa källkoden</a></li>
+    </ul>
+  </h2>
+  <p>Nu är det dags att visa vad websocket-övningar leder fram till. Nämligen en chat! Bara att börja tjattra :)</p>
+
   <h2 id="broadcast-server">Broadcast-server
     <ul>
       <li><a href="lekplats/broadcast-server/">Lek nu!</a></li>
