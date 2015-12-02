@@ -7,7 +7,7 @@ var http = require('http');
 var httpServer = http.createServer(function(request, response) {
   console.log((new Date()) + ' Received request for ' + request.url);
   response.writeHead(200, {'Content-type': 'text/plain'});
-  response.end('Hello world, says matg12\n');
+  response.end('Hello world,\nsays matg12\n');
 });
  
 // Setup the http-server to listen to a port
@@ -16,7 +16,6 @@ httpServer.listen(port, function() {
 });
 
 // Require the modules we need
-// var WebSocketServer = require('/home/saxon/teachers/com/mosstud/www/node/node_modules/websocket').server;
 var WebSocketServer = require('websocket').server;
  
 // Create an object for the websocket

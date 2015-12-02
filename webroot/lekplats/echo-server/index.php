@@ -1,24 +1,25 @@
 <?php $title='Klient till echo-server'; include(__DIR__ . '/../mall/header.php'); ?>
  
 <div id='flash'>
-  <h1>Setting up a client for a websocket echo server.</h1>
-  <p>Check the console to see what actually happens.</p>
+  <h1>Klient till en websocket echo-server</h1>
+  <p>Kika gärna i konsolen...</p>
 
-  <form id='form1'>
+  <form id='echo-form'>
     <p>
-      <label>Connect: </label></br><input id='connect_url'/>
-      <input id='connect' type='button' value='Connect'/>
-      <input id='close' type='button' value='Close connection'/>
+      <label>Anslut: </label></br>
+      <input id='connect_url'>
+      <input id='connect' type='button' value='Anslut'>
+      <input id='close' type='button' value='Avsluta anslutningen'/>
     </p>
 
     <p>
-      <label>Send message: </label></br><input id='message'/>
-      <input id='send_message' type='button' value='Send message'/>
+      <label>Skicka ett meddelande: </label></br>
+      <input id='message'/>
+      <input id='send_message' type='button' value='Skicka meddelande'/>
     </p>
 
-    <p>
-      <label>Log: </label></br><div id='output' class='output'></div>
-    </p>
+    <label>Logg: </label>
+    <div id='output' class='output'></div>
   </form>
 </div>
  

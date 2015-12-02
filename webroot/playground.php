@@ -16,6 +16,14 @@ $herbert['main'] = <<<EOD
 <div class="boxed playground">
   <p><em>Här kommer lite blandat material upp som man kan leka med.</em></p>
 
+  <h2 id="echo-server">Echo-server
+    <ul>
+      <li><a href="lekplats/echo-server/">Lek nu!</a></li>
+      <li><a href="source.php?path=echo-server/index.php">Visa källkoden</a></li>
+    </ul>
+  </h2>
+  <p>Med hjälp av node på server-sidan visar denna enkla klient på kommunikation via websocket.</p>
+
   <h2 id="breakout">Breakout
     <ul>
       <li><a href="lekplats/breakout/">Lek nu!</a></li>
