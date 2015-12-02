@@ -7,7 +7,8 @@ var http = require('http');
 var httpServer = http.createServer(function(request, response) {
   console.log((new Date()) + ' Received request for ' + request.url);
   response.writeHead(200, {'Content-type': 'text/plain'});
-  response.end('Hello world\n');
+  response.end('Hello world,\n');
+  response.end('says matg12\n');
 });
  
 // Setup the http-server to listen to a port
