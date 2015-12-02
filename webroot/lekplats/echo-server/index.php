@@ -2,7 +2,7 @@
  
 <div id='flash'>
   <h1>Klient till en websocket echo-server</h1>
-  <p>Kika gärna i konsolen...</p>
+  <p>Kika gärna i konsollen...</p>
 
   <form id='echo-form'>
     <p>

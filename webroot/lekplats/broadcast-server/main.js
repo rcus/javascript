@@ -7,7 +7,7 @@ $(document).ready(function(){
   var url = 'ws://dbwebb.se:1337/',
     urls = ['ws://dbwebb.se:1337/', 'ws://nodejs1.student.bth.se:8179/', 'ws://nodejs2.student.bth.se:8179/', 'ws://userv:8179/'],
     websocket,
-    form = $('#echo-form'),
+    form = $('#broadcast-form'),
     output = $('#output');
 
   // Display the url in form field for the user to change
@@ -20,7 +20,11 @@ $(document).ready(function(){
   $('#connect').on('click', function(event) {
     url = $('#connect_url').val();
     console.log('Ansluter till: ' + url);
-    websocket = new WebSocket(url, 'echo-protocol');
+    if(websocket) {
+      websocket.close();
+      websocket = null;
+    }
+    websocket = new WebSocket(url, 'broadcast-protocol');
 
     websocket.onopen = function() {
       console.log('Websocket är nu igång.');
@@ -57,8 +61,7 @@ $(document).ready(function(){
     if(!websocket || websocket.readyState === 3) {
       console.log('Websocket är inte ansluten till servern.');
     } else {
-      websocket.send(msg);      
-      outputLog('Du: ' + msg);
+      websocket.send(msg);
     }
   });
 
@@ -71,5 +74,5 @@ $(document).ready(function(){
     console.log(websocket);
   });
 
-  console.log('Jasså, säger du?');  
+  console.log('Sprid budskapet!');  
 });

@@ -2,7 +2,7 @@
  
 <div id='flash'>
   <h1>Klient till en websocket broadcast-server</h1>
-  <p>Kika gärna i konsolen...</p>
+  <p>Kika gärna i konsollen...</p>
 
   <form id='broadcast-form'>
     <p>
