@@ -94,6 +94,8 @@ function acceptConnectionAsEcho(request, subprotocol) {
   connection.on('close', function(reasonCode, description) {
     console.log((new Date()) + ' Peer ' + connection.remoteAddress + ' disconnected.');
   });
+
+  return true;
 }
 
 
