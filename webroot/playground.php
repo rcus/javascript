@@ -16,10 +16,10 @@ $herbert['main'] = <<<EOD
 <div class="boxed playground">
   <p><em>Här kommer lite blandat material upp som man kan leka med.</em></p>
 
-  <h2 id="bradcast-server">Broadcast-server
+  <h2 id="broadcast-server">Broadcast-server
     <ul>
-      <li><a href="lekplats/bradcast-server/">Lek nu!</a></li>
-      <li><a href="source.php?path=bradcast-server/index.php">Visa källkoden</a></li>
+      <li><a href="lekplats/broadcast-server/">Lek nu!</a></li>
+      <li><a href="source.php?path=broadcast-server/index.php">Visa källkoden</a></li>
     </ul>
   </h2>
   <p>Den tidigare websocket-servern returnerade det meddelande du skickade till den. Men denna servern skickar vidare meddelandet till alla som lyssnar. Testa själv genom att öppna flera klienter.</p>
