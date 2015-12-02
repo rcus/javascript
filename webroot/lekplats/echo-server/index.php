@@ -1,7 +1,25 @@
-<?php $title='Mall för JavaScript-tester'; include(__DIR__ . '/../mall/header.php'); ?>
+<?php $title='Klient till echo-server'; include(__DIR__ . '/../mall/header.php'); ?>
  
 <div id='flash'>
-  <p id='text' class='red'>Denna text ska ersättas när sidan och DOM är laddade.</p>
+  <h1>Setting up a client for a websocket echo server.</h1>
+  <p>Check the console to see what actually happens.</p>
+
+  <form id='form1'>
+    <p>
+      <label>Connect: </label></br><input id='connect_url'/>
+      <input id='connect' type='button' value='Connect'/>
+      <input id='close' type='button' value='Close connection'/>
+    </p>
+
+    <p>
+      <label>Send message: </label></br><input id='message'/>
+      <input id='send_message' type='button' value='Send message'/>
+    </p>
+
+    <p>
+      <label>Log: </label></br><div id='output' class='output'></div>
+    </p>
+  </form>
 </div>
  
 <?php $path=__DIR__; include(__DIR__ . '/../mall/footer.php'); ?>
