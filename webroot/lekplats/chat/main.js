@@ -4,7 +4,7 @@
 $(document).ready(function(){
   'use strict';
 
-  var url = 'ws://userv:8180/',
+  var url = 'ws://nodejs2.student.bth.se:8180/',
     websocket, nick;
 
 
