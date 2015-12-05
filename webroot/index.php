@@ -22,8 +22,8 @@ $herbert['main'] = <<<EOD
 </div>
 <div class="sidebar">
   <h3>Aktuellt just nu:</h3>
-  <p>Succéspelet <a href="https://en.wikipedia.org/wiki/Breakout_(video_game)">Breakout</a> från 1976 är tillbaka, nu i <a href="lekplats/breakout/">min egen variant</a>.</p>
-  <p>Läs <a href="report.php#kmom05">senast redovisningen</a>.</p>
+  <p>Nu kan du <a href="lekplats/chat/">chatta</a> med andra. Om de är här, vill säga ;)</p>
+  <p>Läs <a href="report.php#kmom06">senast redovisningen</a>.</p>
 </div>
 EOD;
 

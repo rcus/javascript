@@ -113,6 +113,33 @@ Dock är det två saker som jag inte har riktigt fått kläm på, trots att spel
 **Gjorde du något på extrauppgiften?**  
 Nej. Min ambition att göra ett bra spel tog all min tid. Å andra sidan blev jag nöjd med det resultatet!
 
+##Kmom06: HTML5 och Websockets {#kmom06}
+
+**Allmänt om kursmoment 6**  
+Det är roligt att kunna tillämpa sina kunskaper inom nya områden. JavaScript/jQuery hanterar jag bra nu, men Websockets och node.js är nytt för mig. Därför blev jag nöjd över hur väl jag fick det att fungera, när jag tidigare bara har sneglat på kommunikation med server-sidan från klienten. Det känns som att nya möjligheter till vad jag kan utveckla öppnar sig mer.
+
+**Vilka möjligheter ser du med HTML5 Websockets?**  
+Samtidigt som jag ser att jag kan göra mer när jag har en kommunikation med servern, har jag svårt att se något konkret. Men det innebär ju att två (eller flera) klienter kan kommunisera med hjälp av en chatt, eller liknande. Eller att göra något som är beroende av den andres respons. Eftersom förra momentet handlade om spel, så skulle man kunna utmana varandra i något spel (kanske lite svårt i mitt en-manna-spel Breakout...). Annars jobba på samma dokument eller samma kod. Känns som jag inte kan komma riktigt utanför boxen, utan bara kommer på sådant som redan finns, men det triggar lite ändå.
+
+**Vad tycker du om Node.js och hur känns det att programmera i det?**  
+Sjukt smidigt att det är JavaScript, så att man redan kan det. Samtidigt är det helt nytt, då det blir nya tillämpningar eftersom det är på server-sidan. Behöver utforska mer i dokumentation för att se om det är lätt att sätta sig in i. Bra med att det går att utöka med paket, som till exempel WebSocket-Node.  
+Det är också lite nytt med hanteringen av tjänsterna. Att dra igång en http-server var inte så svårt. Men då den var i förgrunden, kändes det som att de inte är så stabila. Men jag fick igång webservern i bakgrunden, med loggningsfunktion (hittade en tråd i forumet), genom att ange `node webserver-echo > nodelog.log &`. `> nodelog.log` gör att utskriften sparas i den angivna filen, och `&` startar processen i bakgrunden. Dock har jag inte kommit på ett smidigt sätt att ta fram den i förgrunden igen, så att jag kan avsluta den. Men det är ett senare problem. Sedan går det säkert att köra igång den med skript automatiskt, men det lät jag bli nu.
+
+**Beskriv hur du löste echo-servern och broadcast-servern.**  
+Jag kikade mycket på Mikaels exempel, och jobbade vidare med dem. Inga större förändringar, men jag lade till en lista för att välja bland olika servrar. I listan finns dbwebb, båda nodejs-servrarna och min virtuella server hemma. Dessutom använde jag idéen med att låta broadcast-servern använda protokoll för både broadcast och echo, så det räcker med att starta det skriptet för att köra båda tjänsterna. Testa gärna med nodejs1-servern. Om tjänsten fortfarande är igång, vill säga...
+
+Länkar: [Echo](http://www.student.bth.se/~matg12/javascript/webroot/lekplats/echo-server/) | [Broadcast](http://www.student.bth.se/~matg12/javascript/webroot/lekplats/broadcast-server/)
+
+**Beskriv och berätta om din chatt. Förklara hur du byggde din chatt-server och förklara protokollet.**  
+Nu spann jag vidare på tidigare protokoll. För det första lät jag kommunikationen med servern startas redan när sidan har laddats färdigt. På så sätt får användaren igång tjänsten från början, men kan dock inte börja chatta förrän man har angett chattnamn.  
+Jag satsade på kommunikation mellan klient och server utöver meddelanden. Ja, inte många funktioner, men ändå skapa möjligheten. Efter anslutning behöver ju användaren skapa ett chattnamn. Detta är för att visas som online för övriga användare, och för att kunna ta emot meddelanden från de andra. Chattnamnet får inte vara detsamma som någon annans chattnamn. Det får heller inte innehålla otillåtna tecken. I mitt fall blev det bara |-tecknet som begränsades, eftersom jag använder det som separator för chattnamnen när de skickas ut.  
+Meddelandet som skickas till eller från servern inleds med ett ord för funktionen, exempelvis `nick`, `text` eller `guests`. Mottagande sidan kan därmed läsa av vad Meddelandet innehåller och använda informationen rätt. Det kan vara `text:` för ett meddelanden, `nick:` för ange eller bekräfta chattnamnet, eller `guests:` för att skicka en lista med inloggade chattare.
+
+Länk: [Chat](http://www.student.bth.se/~matg12/javascript/webroot/lekplats/chat/)
+
+**Gjorde du något på extrauppgiften?**  
+Jag är inte så IRC-van, så därför blev det inte några finesser från IRC. Däremot satsade jag extra på kommunikationen utöver själva meddelandena, så som jag beskrev ovan. Så en gästlista, vilket är kul för användaren, så att den vet vem man kan chatta med!
+
 EOD
 , 'markdown');
 
@@ -123,6 +150,7 @@ $herbert['sidebar'] = $textFilter->doFilter(<<<EOD
 + [Kmom03](#kmom03)
 + [Kmom04](#kmom04)
 + [Kmom05](#kmom05)
++ [Kmom06](#kmom06)
 EOD
 , 'markdown');
 
