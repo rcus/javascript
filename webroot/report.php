@@ -73,6 +73,7 @@ Tidigare har jag bara använt jQuery för att enkelt kunna hämta specifika elem
 **Berätta om din plugin.**  
 Jag byggde [*jQuery Lightbox plugin*](http://www.student.bth.se/~matg12/javascript/webroot/lightbox.php) som fungerar som lightboxen från paket nummer 6. Tanken var att bygga vidare det till en kombination av galleriet, där övriga valda bilder skulle synas under den stora bilden i lightboxen, i ett lager över den vanliga webbsidan. Men insikten om att jag skulle vilja göra det så ordentligt att tiden skulle springa iväg kom till mig, så det får bli en annan gång. Men jag är väldigt nöjd över pluginet så som det blev.
 
+
 ##Kmom04: AJAX och JSON med jQuery {#kmom04}
 
 **Allmänt om kursmoment 4**  
@@ -93,6 +94,7 @@ Däremot blev utceckningen något enklare än vad jag tänkte mig från början.
 **Lyckades du göra extra-uppgiften och paketera din kod?**  
 Nope, inget försök där.
 
+
 ##Kmom05: HTML5 och Canvas {#kmom05}
 
 **Allmänt om kursmoment 5**  
@@ -112,6 +114,7 @@ Dock är det två saker som jag inte har riktigt fått kläm på, trots att spel
 
 **Gjorde du något på extrauppgiften?**  
 Nej. Min ambition att göra ett bra spel tog all min tid. Å andra sidan blev jag nöjd med det resultatet!
+
 
 ##Kmom06: HTML5 och Websockets {#kmom06}
 
@@ -140,6 +143,52 @@ Länk: [Chat](http://www.student.bth.se/~matg12/javascript/webroot/lekplats/chat
 **Gjorde du något på extrauppgiften?**  
 Jag är inte så IRC-van, så därför blev det inte några finesser från IRC. Däremot satsade jag extra på kommunikationen utöver själva meddelandena, så som jag beskrev ovan. Så en gästlista, vilket är kul för användaren, så att den vet vem man kan chatta med!
 
+
+##Kmom07/10: Projekt och Examination {#kmom07}
+Projekt: jQuery Gallerybox [rcus.github.io/jquery-gallerybox](https://rcus.github.io/jquery-gallerybox)
+
+**Paketera, presentera och produktifiera**  
+Jag har valt att utveckla en deluppgift från övningen med nio olika jquery-exempel (kmom03). Eller ja, snarare två uppgifter: lightboxen och galleriet. Pluginet fick heta jQuery Gallerybox, där funktionen är att öppna upp en vald bild i en lightbox och samtidigt visa upp övriga bilder i nederkanten. Tanken väcktes redan då vi gjorde övningarna, men jag la det till möjligt-att-göra-senare-listan.  
+En tanke från början var att få det lättåtkomligt för andra utvecklare, därför passar det bra med att lägga källkoden på Github. Men jag ville göra det ännu smidigare, så jag packade ihop det och publicerade detta på [npmjs.com](https://www.npmjs.com/package/jquery-gallerybox). Nu går det att installera paketet med `npm install jquery-gallerybox`. Likaså ville jag ha en tydlig webbsida med exempel och som beskriver hur det används. Jag ville lyfta ur det från min me-sida i kursen. Samtidigt blev jag nyfiken på att få igång en sida på github.io, istället för att "bara" lägga upp webbsidan på studentservern. Gick smidigt att skapa en ny gren, `gh-pages`, som innehåller webbsidan. Med andra ord finns även webbsidans källkod på [Github](https://github.com/rcus/jquery-gallerybox/tree/gh-pages).
+
+**Ha koll på konkurrenterna och lär av dem**  
+Oj, här blev det svettigt. Första tanken var att detta borde ju inte vara så stort. Vid en första sökning på nätet, så fanns det inte många som stämde in på vad jag tänkte. Men med lite justerade söktermer hittade jag flera som gör det som jag tänkte att mitt plugin skulle göra. Fast bättre. Suck. Jag märkte att det har varit lång utveckligsprocess för flera, speciellt av de stora.  
+Snabbt fick jag en massa idéer på vad jag kan göra, men satsade först på grundfunktionen. Sedan blir det fortsatt utveckling för att förbättra. Bland annat kontroll av bildbyten, responsivitet, alternativ för småbilderna i nederkanten och zoom-funktion för den stora bilden.
+
+**Kvalitet och omfattning**  
+Jag ville komma igång med en helhet som fungerar. Det går att köra pluginet som det är, men det finns också utrymmen för att vidareutveckla och förbättra en hel del. Förra stycket innehåller en hel del idéer på fortsatt arbete. Det var bara att ställa in mig på att få till grundfunktionen, tänka KISS.  
+Inledningsvis använde jag mig av koden från tidigare övningar. Jag fortsatte med att ta reda på mer kring plugin-uppbyggnad, och kom fram till att jag behövde ändra lite i strukturen för att få ihop det lite bättre. Exempelvis innebar det i min första version att användaren skulle få lyssna på `click`-event som den skulle få koda ihop själv:
+```
+$('.gbox').click(function() {
+  $('.gbox').gallerybox();
+});
+```
+Så kunde jag inte ha det. Numera anropas Gallerybox med enbart en rad:
+```
+$('.gbox').gallerybox();
+```
+Dessutom har jag sett till att man kan lägga in lite olika inställningar. I samband med att man kör igång Gallerybox, så kan man ställa in bakgrundensfärg/-transparens och text för att avsluta Gallerybox (CLOSE). Och nu när strukturen finns där, går det smidigt att lägga till fler inställningar framöver. Exempel på kod blir då:
+```
+$('.gbox').gallerybox({
+  bgColor: 'blue',
+  bgOpacity: 0.5,
+  closeText: 'EXIT'
+});
+```
+När jag kodar vill jag få till en generell kod. Jag vill försöka låta bli att vara alltför specifik i mina funktioner, så att jag kan återanvända stora delar. Vissa delar kan man fortfarande klia sig på hakan för, som när de olika elementen skapas. Däremot är jag nöjd över funktioner som ska skrolla småbilderna, en funktion för båda hållen, som dessutom kollar av att den inte går för långt åt något håll.
+
+**Valbara krav**  
+I projektet har jag satsat lite extra på vissa bitar, som jag har nämnt i tidigare stycken. Bland annat är jag nöjd med paketeringen och publiceringen av pluginet, att det finns på npmjs.com och att det presenteras genom GitHub Pages. För egen del känns det inte bara som en bra produkt, utan som en bra produkt som är spridbar. Även om man kanske ska ta statistik med en viss nypa salt, så är det ändå roligt att se att pluginet har laddats ner mer än 100 gånger från npmjs.com den senaste veckan. :)  
+Även strukturen för inställningar tycker jag är bra, då pluginet får förutsättningar för att kunna konfigureras av användarna, utan att de behöver skriva om koden.  
+Annat som jag har gjort extra under kursens gång som jag vill lyfta upp är baddien i kursmoment 01 som lyckades göra en stående dubbel saltomortal framåt. :) Jag är också nöjd med [roulettespelets](lekplats/roulette/) upplägg med metoder i koden (se [källkoden](source.php?path=roulette/main.js)) och [chattens](lekplats/chat/) lista över inloggade användare.
+
+**Allmänt om projektet**  
+Projektets upplägg var väldigt öppet, vilket passade mig bra då jag redan under ett tidigare kursmoment fick en idé på vad som skulle vara kul att fortsätta med att utveckla. För min del flöt det på hyfsat smidigt, inga större problem på vägen. Jag fick lära mig en hel del från jQuerys API och sen att googla runt och hitta lösningar (där Stackoverflow fick stå för flera sökresultat). Enkelheten var i att det var relativt lätt att komma igång, men utmaningen blev istället att kunna anpassa till så som min tanke var. Och att hitta en lagom nivå på nya idéer som dök upp under tiden. Tidsmässigt har jag lagt ner en rimlig tid som motsvarar kursens upplägg. Däremot går det att fortsätta att utveckla mitt plugin, så sista timmen är nog inte gjord på detta ännu. Som sagt, projektet har passat mig bra, och jag tycker att det var ett mycket bra och rimligt projektupplägg.
+
+**Tankar om kursen**  
+Kursen i helhet tycker jag har varit bra och intressant, då den har belyst flera olika delar inom JavaScript. Inte bara jQuery och AJAX, utan även websocket och node.js. Bra! För min del har detta en stor relevans med det som jag vill jobba med framöver, vilket har gett mig ett stort engagemang. Dock, vilket är nackdel med ett brett innehåll, har det inte varit några djupdykningar inom någon specifik del. Klart, här har projektet kunnat användas, men då är det utan ett förberett undervisningsmaterial.  
+Klart en rekommenderbar kurs! Betyg: 8 av 10
+
 EOD
 , 'markdown');
 
@@ -151,6 +200,7 @@ $herbert['sidebar'] = $textFilter->doFilter(<<<EOD
 + [Kmom04](#kmom04)
 + [Kmom05](#kmom05)
 + [Kmom06](#kmom06)
++ [Kmom07/10](#kmom07)
 EOD
 , 'markdown');
 

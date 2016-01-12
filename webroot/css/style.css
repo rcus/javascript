@@ -9,6 +9,9 @@ body {
 code {
   background-color: #eef;
 }
+.src-container code {
+  background-color: initial;
+}
 
 pre code,
 code.block {
