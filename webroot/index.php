@@ -22,8 +22,8 @@ $herbert['main'] = <<<EOD
 </div>
 <div class="sidebar">
   <h3>Aktuellt just nu:</h3>
-  <p>Nu kan du <a href="lekplats/chat/">chatta</a> med andra. Om de är här, vill säga ;)</p>
-  <p>Läs <a href="report.php#kmom06">senast redovisningen</a>.</p>
+  <p>Läs om <a href="report.php#kmom07">projektet</a>!</p>
+  <p>Eller kolla in resultatet: <a href="https://rcus.github.io/jquery-gallerybox/">jQuery Gallerybox</a></p>
 </div>
 EOD;
 
