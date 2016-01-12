@@ -16,6 +16,30 @@ $herbert['main'] = <<<EOD
 <div class="boxed playground">
   <p><em>Här kommer lite blandat material upp som man kan leka med.</em></p>
 
+  <h2 id="chat">Chat
+    <ul>
+      <li><a href="lekplats/chat/">Lek nu!</a></li>
+      <li><a href="source.php?path=chat/index.php">Visa källkoden</a></li>
+    </ul>
+  </h2>
+  <p>Nu är det dags att visa vad websocket-övningar leder fram till. Nämligen en chat! Bara att börja tjattra :)</p>
+
+  <h2 id="broadcast-server">Broadcast-server
+    <ul>
+      <li><a href="lekplats/broadcast-server/">Lek nu!</a></li>
+      <li><a href="source.php?path=broadcast-server/index.php">Visa källkoden</a></li>
+    </ul>
+  </h2>
+  <p>Den tidigare websocket-servern returnerade det meddelande du skickade till den. Men denna servern skickar vidare meddelandet till alla som lyssnar. Testa själv genom att öppna flera klienter.</p>
+
+  <h2 id="echo-server">Echo-server
+    <ul>
+      <li><a href="lekplats/echo-server/">Lek nu!</a></li>
+      <li><a href="source.php?path=echo-server/index.php">Visa källkoden</a></li>
+    </ul>
+  </h2>
+  <p>Med hjälp av node på server-sidan visar denna enkla klient på kommunikation via websocket.</p>
+
   <h2 id="breakout">Breakout
     <ul>
       <li><a href="lekplats/breakout/">Lek nu!</a></li>

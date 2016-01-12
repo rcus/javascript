@@ -1,0 +1,69 @@
+/**
+ * Import base style
+ */
+@import "../mall/base.less";
+ 
+/**
+ * Here comes specific style for a certain test program.
+ */
+
+.hidden {
+  display: none !important;
+}
+
+#flash {
+  display: flex;
+  align-items: center;
+  min-height: 20em;
+}
+
+#chat-form {
+  width: 100%;
+}
+
+#notconnected {
+  text-align: center;
+}
+
+#notconnected span {
+  text-align: center;
+}
+
+#connected > div {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #aaa;
+}
+
+#connected > div > div {
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 0.3em;
+  font-size: smaller;
+}
+
+#connected > div > div p {
+  margin-bottom: 0.4em;
+}
+
+#connected #output {
+  width: 75%;
+}
+
+#connected #guests {
+  width: 25%;
+  border-left: 1px solid #aaa;
+}
+
+#connected input[type="text"] {
+  width: 100%;
+  padding: 0.5em;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  border-top: none;
+  font-size: larger;
+}
